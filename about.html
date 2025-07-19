@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about ProShield Roofing – our mission, services, warranties, and special offers for residential and commercial roofing.">
+    <meta name="keywords" content="roofing company, about us, roofing services, roof warranties, roofing offers">
+    <title>About ProShield Roofing | Premium Roofing Services & Offers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        :root {
+            --primary: #2a4365;
+            --primary-light: #3182ce;
+            --secondary: #980000;
+            --accent: #f6ad55;
+            --light: #f7fafc;
+            --dark: #1a202c;
+            --gray: #718096;
+            --light-gray: #e2e8f0;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #c53030;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--secondary);
+            color: var(--secondary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            font-size: 2.2rem;
+            color: var(--primary);
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent);
+            margin: 1rem auto 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .logo img {
+            height: 150px;
+            margin-right: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            font-weight: 600;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-menu a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover:after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('Roof_hero.png') no-repeat center center/cover;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* About Company Section */
+        .about-company {
+            background-color: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-img {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+        }
+
+        /* Mission & Values */
+        .mission {
+            background-color: var(--light-gray);
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .mission-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .mission-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .mission-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        /* Services Expanded */
+        .services-expanded {
+            background-color: white;
+        }
+
+        .service-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .tab-btn {
+            padding: 0.8rem 1.5rem;
+            background-color: var(--light-gray);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .tab-btn.active {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .service-detail {
+            margin-bottom: 2rem;
+        }
+
+        .service-detail h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        /* Special Offers */
+        .offers {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .offers .section-title {
+            color: white;
+        }
+
+        .offer-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .offer-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+        }
+
+        .offer-card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .offer-card h3 {
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .offer-card .valid {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* Certifications */
+        .certifications {
+            background-color: white;
+        }
+
+        .cert-logos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .cert-logo {
+            max-width: 150px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .cert-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .footer-logo span {
+            color: var(--secondary);
+        }
+
+        .footer-about p {
+            margin-bottom: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        .footer-links h3, .footer-contact h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-links h3:after, .footer-contact h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary);
+        }
+
+        .footer-links ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .contact-icon {
+            margin-right: 1rem;
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
+                transition: var(--transition);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+ 
+
+<!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="South_beds_roofing_logo.png" alt="South Beds Roofing Logo">
+                
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Specialist Roofing Solutions for Your Home or Business</h1>
+            <p>A proud family run business with over 15 years of experience, we provide top-quality roofing services with industry-leading warranties and exceptional customer service.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn">Get a Free Quote</a>
+                <a href="tel:+18005551234" class="btn">Call Now</a>
+            </div>
+        </div>
+    </section>
+
+  
+    
+
+
+    <!-- About Company Section -->
+    <section class="section about-company">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Our roofing team">
+                </div>
+                <div class="about-content">
+                    <h2>Our Family's Story</h2>
+<p>For over 15 years, South Beds Roofing has been protecting homes and building trust throughout our community. What began in 2010 as John and Sarah Miller's dream—a small family business built on honesty and craftsmanship—has flourished into the region's most recommended roofing company.</p>
+
+<p>As a family-owned and operated business, we bring personal care to every project. Our factory-certified installers aren't just employees—they're part of our extended family, receiving ongoing training to master the latest roofing technologies and techniques.</p>
+
+<p>While others cut corners with subcontractors, we maintain complete control over quality by employing our own dedicated crews. This means your roof is installed by experienced professionals who take the same pride in their work as we did when we first opened our doors.</p>
+
+<p>Three generations of roofing expertise. One unwavering commitment to excellence.</p>
+
+<a href="#contact" class="btn">Meet Our Family of Roofing Specialists</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Mission & Values Section -->
+    <section class="section mission">
+        <div class="container">
+            <h2 class="section-title">Our Mission & Values</h2>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Quality Craftsmanship</h3>
+                    <p>We use only premium materials and follow manufacturer specifications to ensure your roof lasts for decades.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Honest Service</h3>
+                    <p>No pressure sales tactics - just honest assessments and recommendations for your roofing needs.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Lifetime Warranties</h3>
+                    <p>We stand behind our work with industry-leading warranties that protect your investment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<section class="section services-expanded">
+  <div class="container">
+    <h2 class="section-title">Our Roofing Services</h2>
+
+    <div class="service-tabs">
+      <button class="tab-btn active" data-tab="residential">Residential</button>
+      <button class="tab-btn" data-tab="commercial">Commercial</button>
+      <button class="tab-btn" data-tab="emergency">Emergency</button>
+    </div>
+
+    <div id="residential" class="tab-content active">
+  <div class="service-detail">
+    <h3>Asphalt Shingle Roofing</h3>
+    <p>Premium architectural shingles with enhanced durability and wind resistance up to 130 mph.</p>
+    <button class="toggle-btn">Read more</button>
+    <div class="more-info hidden">
+      <p><br>Our asphalt shingles offer the perfect balance of performance and curb appeal. Built with multiple laminated layers and reinforced with fiberglass, they provide superior impact resistance, algae protection, and long-term weather durability. Choose from a rich palette of colors and textures that mimic the look of wood or slate, all while staying affordable. Every installation includes a comprehensive waterproofing system beneath the surface, and we stand behind our work with a 30-year manufacturer’s warranty and a 10-year workmanship guarantee. Perfect for homeowners looking for reliable performance and low maintenance.</p>
+    </div>
+  </div>
+
+  <div class="service-detail">
+    <h3>Metal Roofing</h3>
+    <p>Energy-efficient metal roofing systems with 50+ year lifespans.</p>
+    <button class="toggle-btn">Read more</button>
+    <div class="more-info hidden">
+      <p><br>Our metal roofs are engineered for extreme performance. Made from high-strength steel or aluminum and coated with UV-reflective finishes, they reduce your energy bills while resisting corrosion, fire, and mildew. With clean modern lines and dozens of color options, they enhance any home's style. Our standing seam systems are fastened with hidden clips for a sleek, watertight finish. This is an ideal long-term investment that increases your home's value, especially in regions with high winds, snow loads, or wildfires. Backed by a 40–50 year material warranty and available with acoustic dampening underlayments for quiet comfort.</p>
+    </div>
+  </div>
+
+  <div class="service-detail">
+    <h3>Tile & Slate Roofing</h3>
+    <p>Authentic clay tile and natural slate installations for luxury homes.</p>
+    <button class="toggle-btn">Read more</button>
+    <div class="more-info hidden">
+      <p><br>For the ultimate in elegance and longevity, nothing compares to real slate and clay tile roofing. We offer hand-selected natural slate from trusted quarries, and traditional clay tiles in Mediterranean, Spanish, and barrel profiles. These roofs are not only beautiful—they’re fireproof, weather-resistant, and can last over 100 years with proper care. Each project is meticulously installed by our tile specialists using upgraded structural decking and stainless steel fasteners. This premium roofing system adds unmatched character and value to your home while requiring very little maintenance.</p>
+    </div>
+  </div>
+</div>
+
+<div id="commercial" class="tab-content">
+  <div class="service-detail">
+    <h3>Flat Roof Systems</h3>
+    <p>TPO, EPDM, and modified bitumen solutions for commercial buildings.</p>
+    <button class="toggle-btn">Read more</button>
+    <div class="more-info hidden">
+      <p><br>Our commercial flat roofing solutions are engineered for energy efficiency, long-term durability, and watertight performance. TPO is a white, heat-welded membrane that reflects UV rays, lowering energy costs. EPDM is a rubber-based system known for its extreme flexibility and ease of repair. Modified bitumen offers multi-layered strength with excellent impact resistance. All systems are fully adhered or mechanically fastened with reinforced seams and custom flashing details. Ideal for offices, retail, and industrial buildings, our flat roof packages come with thermal insulation options and up to 30-year NDL (No Dollar Limit) warranties.</p>
+    </div>
+  </div>
+
+  <div class="service-detail">
+    <h3>Metal Commercial Roofing</h3>
+    <p>Durable standing seam metal roofs for large commercial structures.</p>
+    <button class="toggle-btn">Read more</button>
+    <div class="more-info hidden">
+      <p><br>Built for performance and ROI, our commercial-grade metal roofing systems are crafted from thick-gauge steel with Kynar 500® finishes that resist fading and corrosion for decades. The standing seam design provides interlocking strength and leak protection, especially critical for large-span structures. Whether it’s a warehouse, hospital, school, or agricultural facility, our systems are engineered for thermal movement, high wind uplift, and low maintenance. We also offer rooftop accessory integration for solar panels, HVAC units, and drainage solutions, all installed by certified commercial specialists.</p>
+    </div>
+  </div>
+</div>
+
+<div id="emergency" class="tab-content">
+  <div class="service-detail">
+    <h3>24/7 Emergency Repairs</h3>
+    <p>Immediate response for storm damage, leaks, and urgent roofing issues.</p>
+    <button class="toggle-btn">Read more</button>
+    <div class="more-info hidden">
+      <p><br>Roof emergencies don’t wait—and neither do we. Our 24/7 response team is on call to handle sudden leaks, fallen debris, wind or hail damage, and structural issues. We arrive fast, assess the situation, and immediately install secure tarping or temporary repairs to stop further damage. Our vehicles are stocked with the tools and materials needed to provide on-the-spot fixes and short-term protection. We can also document damage with drone photos and thermal scans for insurance purposes. Trust our rapid-response professionals to protect your home or business during its most vulnerable moments.</p>
+    </div>
+  </div>
+
+  <div class="service-detail">
+    <h3>Insurance Claim Assistance</h3>
+    <p>We work with your insurance company to ensure proper coverage.</p>
+    <button class="toggle-btn">Read more</button>
+    <div class="more-info hidden">
+      <p><br>We take the stress out of storm recovery by handling the insurance process from start to finish. Our certified inspectors perform detailed assessments of all visible and hidden damage—often identifying issues adjusters miss. We meet with your insurance provider onsite to advocate on your behalf and ensure you receive fair coverage. We prepare full documentation including measurements, photos, condition reports, and replacement estimates. Once approved, we handle the repairs with transparency, timeliness, and high-quality craftsmanship. We’re on your side from the first inspection through final inspection.</p>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+<style>
+.section.services-expanded {
+  padding: 4rem 1rem;
+  background: #fff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.service-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: #e0e0e0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab-btn.active {
+  background: #2c3e50;
+  color: #fff;
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.4s ease-in;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.service-detail {
+  background: #f8f8f8;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.service-detail h3 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.service-detail p {
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.toggle-btn {
+  background: #3498db;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.more-info {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.more-info.visible {
+  max-height: 200px;
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+</style>
+
+<script>
+  // Tab switching
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const servicetabContents = document.querySelectorAll('.tab-content');
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Remove all active classes
+      tabButtons.forEach(b => b.classList.remove('active'));
+      tabContents.forEach(c => c.classList.remove('active'));
+
+      // Activate clicked tab
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  // Toggle Read More sections
+  const toggleButtons = document.querySelectorAll('.toggle-btn');
+  toggleButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const moreInfo = btn.nextElementSibling;
+      moreInfo.classList.toggle('visible');
+      moreInfo.classList.toggle('hidden');
+      btn.textContent = moreInfo.classList.contains('visible') ? 'Read less' : 'Read more';
+    });
+  });
+</script>
+
+
+
+   
+
+
+
+
+    <!-- Special Offers Section -->
+    <section class="section offers">
+        <div class="container">
+            <h2 class="section-title">Special Offers</h2>
+            <div class="offer-cards">
+                <div class="offer-card">
+                    <h3>Spring Roofing Special</h3>
+                    <span class="valid">Valid through June 30, 2024</span>
+                    <p>Get 10% off complete roof replacements when scheduled before summer. Includes free gutter inspection.</p>
+                    <a href="#contact" class="btn">Claim Offer</a>
+                </div>
+                <div class="offer-card">
+                    <h3>Senior & Military Discount</h3>
+                    <span class="valid">Year-round</span>
+                    <p>We offer 5% discounts for seniors (65+) and active/retired military personnel on all services.</p>
+                    <a href="#contact" class="btn">Claim Offer</a>
+                </div>
+                <div class="offer-card">
+                    <h3>Referral Program</h3>
+                    <span class="valid">Ongoing</span>
+                    <p>Refer a friend and both receive $250 credit toward future roofing services after their job is completed.</p>
+                    <a href="#contact" class="btn">Claim Offer</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Certifications Section -->
+    <section class="section certifications">
+        <div class="container">
+            <h2 class="section-title">Our Certifications</h2>
+            <p class="text-center">We maintain the highest industry certifications to ensure quality workmanship on every project.</p>
+            <div class="cert-logos">
+                <img src="https://via.placeholder.com/150x80?text=GAF+Master+Elite" alt="GAF Master Elite" class="cert-logo">
+                <img src="https://via.placeholder.com/150x80?text=CertainTeed+SELECT" alt="CertainTeed SELECT" class="cert-logo">
+                <img src="https://via.placeholder.com/150x80?text=BBB+A+" alt="BBB A+" class="cert-logo">
+                <img src="https://via.placeholder.com/150x80?text=NRCA+Member" alt="NRCA Member" class="cert-logo">
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Quote Form Section -->
+<section class="quote-section" id="get-quote">
+    <div class="quote-container">
+        <div class="quote-header">
+            <h2>Request A Quote</h2>
+            <div class="quote-divider"></div>
+            <p>Complete the form below and our roofing experts will contact you within 24 hours</p>
+        </div>
+
+        <form class="roofing-quote-form" id="quoteForm">
+            <div class="form-grid">
+                <!-- Personal Information -->
+                <div class="form-group">
+                    <label for="name">Full Name*</label>
+                    <input type="text" id="name" name="name" required placeholder="John Smith">
+                    <span class="error-message">Please enter your full name</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    <span class="error-message">Please enter a valid email</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number*</label>
+                    <input type="tel" id="phone" name="phone" required placeholder=" 01234-456789">
+                    <span class="error-message">Please enter a valid phone number</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="property-address">Property Address*</label>
+                    <input type="text" id="property-address" name="property-address" required placeholder="123 Main St, City, Poscode">
+                    <span class="error-message">Please enter your property address</span>
+                </div>
+
+                <!-- Roofing Details -->
+                <div class="form-group">
+                    <label for="roof-type">Roof Type</label>
+                    <select id="roof-type" name="roof-type">
+                        <option value="">Select roof type</option>
+                        <option value="asphalt">Asphalt Shingles</option>
+                        <option value="metal">Metal Roofing</option>
+                        <option value="tile">Tile Roofing</option>
+                        <option value="flat">Flat Roof</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="service-type">Service Needed*</label>
+                    <select id="service-type" name="service-type" required>
+                        <option value="">Select service</option>
+                        <option value="repair">Repair</option>
+                        <option value="replacement">Full Replacement</option>
+                        <option value="inspection">Inspection</option>
+                        <option value="maintenance">Maintenance</option>
+                        <option value="emergency">Emergency Service</option>
+                    </select>
+                    <span class="error-message">Please select a service</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="urgency">Urgency</label>
+                    <select id="urgency" name="urgency">
+                        <option value="not-urgent">Not Urgent</option>
+                        <option value="soon">Within 1-2 Weeks</option>
+                        <option value="urgent">ASAP</option>
+                        <option value="emergency">Emergency (Same Day)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="budget">Approximate Budget</label>
+                    <select id="budget" name="budget">
+                        <option value="">Not sure</option>
+                        <option value="under-5k">Under £5,000</option>
+                        <option value="5k-10k">£5,000 - £10,000</option>
+                        <option value="10k-20k">£10,000 - £20,000</option>
+                        <option value="20k-plus">£20,000+</option>
+                    </select>
+                </div>
+
+                <!-- Project Details -->
+                <div class="form-group full-width">
+                    <label for="details">Project Details*</label>
+                    <textarea id="details" name="details" required placeholder="Please describe your roofing needs, any specific issues, or special requirements..."></textarea>
+                    <span class="error-message">Please describe your project</span>
+                </div>
+
+                <!-- How You Heard About Us -->
+                <div class="form-group full-width">
+                    <label for="referral">How did you hear about us?</label>
+                    <select id="referral" name="referral">
+                        <option value="">Select an option</option>
+                        <option value="search">Search Engine (Google, Bing)</option>
+                        <option value="social">Social Media</option>
+                        <option value="recommendation">Friend/Family Recommendation</option>
+                        <option value="advertisement">Advertisement</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-submit">
+                <button type="submit" class="submit-btn">
+                    <span class="submit-text">Request Free Quote</span>
+                    <span class="loading-spinner" style="display:none;">Sending...</span>
+                </button>
+            </div>
+
+            <div class="form-success" style="display:none;">
+                <p>Thank you for your request! We've received your information and will contact you shortly.</p>
+            </div>
+        </form>
+    </div>
+</section>
+
+<style>
+    /* Quote Form Section Styles */
+    .quote-section {
+        background-color: var(--primary);
+        padding: 3rem 1rem;
+        margin: 2rem 0;
+    }
+
+    .quote-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        padding: 2rem;
+    }
+
+    .quote-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .quote-header h2 {
+        color: #2c3e50;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .quote-header p {
+        color: #7f8c8d;
+        font-size: 1rem;
+    }
+
+    .quote-divider {
+        width: 60px;
+        height: 4px;
+        background: #e67e22;
+        margin: 1rem auto;
+        border-radius: 2px;
+    }
+
+    /* Form Grid Layout */
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    @media (min-width: 768px) {
+        .form-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+    }
+
+    /* Form Group Styles */
+    .form-group {
+        margin-bottom: 0.5rem;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: #34495e;
+        font-size: 0.95rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        transition: all 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: #3498db;
+        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    }
+
+    .form-group textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    /* Error Handling */
+    .error-message {
+        color: #e74c3c;
+        font-size: 0.85rem;
+        margin-top: 0.3rem;
+        display: none;
+    }
+
+    .form-group.error input,
+    .form-group.error select,
+    .form-group.error textarea {
+        border-color: #e74c3c;
+    }
+
+    .form-group.error .error-message {
+        display: block;
+    }
+
+    /* Submit Button */
+    .form-submit {
+        margin-top: 1.5rem;
+        text-align: center;
+    }
+
+    .submit-btn {
+        background-color: #e67e22;
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .submit-btn:hover {
+        background-color: #d35400;
+        transform: translateY(-2px);
+    }
+
+    .submit-btn:active {
+        transform: translateY(0);
+    }
+
+    /* Success Message */
+    .form-success {
+        background-color: #d5f5e3;
+        color: #27ae60;
+        padding: 1rem;
+        border-radius: 4px;
+        margin-top: 1.5rem;
+        text-align: center;
+        display: none;
+    }
+
+    .form-success p {
+        margin: 0;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('quoteForm');
+        const submitBtn = form.querySelector('.submit-btn');
+        const submitText = form.querySelector('.submit-text');
+        const loadingSpinner = form.querySelector('.loading-spinner');
+        const successMessage = form.querySelector('.form-success');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Reset error states
+            const errorGroups = form.querySelectorAll('.form-group.error');
+            errorGroups.forEach(group => group.classList.remove('error'));
+            
+            // Validate required fields
+            let isValid = true;
+            const requiredFields = form.querySelectorAll('[required]');
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.closest('.form-group').classList.add('error');
+                    isValid = false;
+                }
+            });
+            
+            // Validate email format
+            const emailField = form.querySelector('#email');
+            if (emailField.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value)) {
+                emailField.closest('.form-group').classList.add('error');
+                emailField.nextElementSibling.textContent = 'Please enter a valid email address';
+                isValid = false;
+            }
+            
+            // Validate phone number format (basic validation)
+            const phoneField = form.querySelector('#phone');
+            if (phoneField.value && !/^[\d\s\(\)\-]+$/.test(phoneField.value)) {
+                phoneField.closest('.form-group').classList.add('error');
+                phoneField.nextElementSibling.textContent = 'Please enter a valid phone number';
+                isValid = false;
+            }
+            
+            if (!isValid) {
+                return;
+            }
+            
+            // Form is valid - proceed with submission
+            submitText.style.display = 'none';
+            loadingSpinner.style.display = 'inline';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission (replace with actual AJAX call)
+            setTimeout(() => {
+                // Here you would typically make an AJAX call to your backend
+                // For demonstration, we'll just show the success message
+                
+                submitText.style.display = 'inline';
+                loadingSpinner.style.display = 'none';
+                submitBtn.disabled = false;
+                
+                form.reset();
+                successMessage.style.display = 'block';
+                
+                // Scroll to success message
+                successMessage.scrollIntoView({ behavior: 'smooth' });
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 5000);
+            }, 1500);
+        });
+        
+        // Real-time validation for email field
+        const emailField = form.querySelector('#email');
+        emailField.addEventListener('blur', function() {
+            if (this.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.value)) {
+                this.closest('.form-group').classList.add('error');
+                this.nextElementSibling.textContent = 'Please enter a valid email address';
+            }
+        });
+        
+        // Real-time validation for phone field
+        const phoneField = form.querySelector('#phone');
+        phoneField.addEventListener('blur', function() {
+            if (this.value && !/^[\d\s\(\)\-]+$/.test(this.value)) {
+                this.closest('.form-group').classList.add('error');
+                this.nextElementSibling.textContent = 'Please enter a valid phone number';
+            }
+        });
+        
+        // Clear error when user starts typing
+        const inputs = form.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('input', function() {
+                if (this.closest('.form-group.error')) {
+                    this.closest('.form-group').classList.remove('error');
+                }
+            });
+        });
+    });
+</script>
+
+
+
+
+
+     <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">South Beds Roofing</a>
+                    <p>Providing premium roofing solutions with unmatched craftsmanship and customer service since 2010.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#services">Roof Installation</a></li>
+                        <li><a href="#services">Roof Repair</a></li>
+                        <li><a href="#services">Roof Inspection</a></li>
+                        <li><a href="#services">Emergency Services</a></li>
+                        <li><a href="#services">Gutter Systems</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <p>27 Beech Green<br>Duntable, LU6 1EB</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <p><a href="tel:+0800 158 58 56">0800 158 58 56</a></p>
+                       
+                        
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <p><a href="mailto:southbedsroofing8@gmail.com">southbedsroofing8@gmail.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <p>Mon-Fri: 8AM - 6PM<br>Sat: 9AM - 2PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 South Beds Roofing. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="privacy.html">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Service Tabs
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                btn.classList.add('active');
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Sticky header on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 100);
+        });
+    </script>
+</body>
+</html>
