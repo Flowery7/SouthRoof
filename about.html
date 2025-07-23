@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn more about ProShield Roofing – our mission, services, warranties, and special offers for residential and commercial roofing.">
     <meta name="keywords" content="roofing company, about us, roofing services, roof warranties, roofing offers">
-    <title>About South Beds Roofing | Premium Roofing Services & Offers</title>
+    <title>About South Beds Roofing | Premium Roof Services & Offers</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Reset and Base Styles */
@@ -263,8 +263,6 @@ header {
         color: var(--secondary);
     }
 }
-
-
 
 
 
@@ -1262,8 +1260,11 @@ header {
         const submitText = form.querySelector('.submit-text');
         const loadingSpinner = form.querySelector('.loading-spinner');
         const successMessage = form.querySelector('.form-success');
+        
+        // API Gateway endpoint (replace with your actual endpoint)
+        const API_ENDPOINT = 'https://your-api-id.execute-api.region.amazonaws.com/prod/quotes';
 
-        form.addEventListener('submit', function(e) {
+        form.addEventListener('submit', async function(e) {
             e.preventDefault();
             
             // Reset error states
@@ -1289,11 +1290,11 @@ header {
                 isValid = false;
             }
             
-            // Validate phone number format (basic validation)
+            // Validate phone number format (international format)
             const phoneField = form.querySelector('#phone');
-            if (phoneField.value && !/^[\d\s\(\)\-]+$/.test(phoneField.value)) {
+            if (phoneField.value && !/^\+?[\d\s\-\(\)]{7,20}$/.test(phoneField.value)) {
                 phoneField.closest('.form-group').classList.add('error');
-                phoneField.nextElementSibling.textContent = 'Please enter a valid phone number';
+                phoneField.nextElementSibling.textContent = 'Please enter a valid phone number (international format accepted)';
                 isValid = false;
             }
             
@@ -1301,34 +1302,69 @@ header {
                 return;
             }
             
-            // Form is valid - proceed with submission
+            // Form is valid - prepare submission data
             submitText.style.display = 'none';
             loadingSpinner.style.display = 'inline';
             submitBtn.disabled = true;
             
-            // Simulate form submission (replace with actual AJAX call)
-            setTimeout(() => {
-                // Here you would typically make an AJAX call to your backend
-                // For demonstration, we'll just show the success message
+            const formData = {
+                name: form.querySelector('#name').value.trim(),
+                email: form.querySelector('#email').value.trim(),
+                phone: form.querySelector('#phone').value.trim(),
+                propertyAddress: form.querySelector('#property-address').value.trim(),
+                roofType: form.querySelector('#roof-type').value,
+                serviceType: form.querySelector('#service-type').value,
+                urgency: form.querySelector('#urgency').value,
+                budget: form.querySelector('#budget').value,
+                details: form.querySelector('#details').value.trim(),
+                referral: form.querySelector('#referral').value
+            };
+            
+            try {
+                // Make API call to Lambda backend
+                const response = await fetch(API_ENDPOINT, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
                 
-                submitText.style.display = 'inline';
-                loadingSpinner.style.display = 'none';
-                submitBtn.disabled = false;
+                const data = await response.json();
                 
+                if (!response.ok) {
+                    throw new Error(data.error || 'Submission failed');
+                }
+                
+                // Success handling
                 form.reset();
                 successMessage.style.display = 'block';
-                
-                // Scroll to success message
                 successMessage.scrollIntoView({ behavior: 'smooth' });
                 
                 // Hide success message after 5 seconds
                 setTimeout(() => {
                     successMessage.style.display = 'none';
                 }, 5000);
-            }, 1500);
+                
+            } catch (error) {
+                console.error('Submission error:', error);
+                
+                // Show appropriate error message
+                const errorMessage = error.message.includes('already exists') 
+                    ? "We already have your submission and will contact you shortly."
+                    : "There was an error submitting your request. Please try again later.";
+                
+                alert(errorMessage);
+                
+            } finally {
+                // Reset UI state
+                submitText.style.display = 'inline';
+                loadingSpinner.style.display = 'none';
+                submitBtn.disabled = false;
+            }
         });
         
-        // Real-time validation for email field
+        // Enhanced real-time validation
         const emailField = form.querySelector('#email');
         emailField.addEventListener('blur', function() {
             if (this.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.value)) {
@@ -1337,12 +1373,11 @@ header {
             }
         });
         
-        // Real-time validation for phone field
         const phoneField = form.querySelector('#phone');
         phoneField.addEventListener('blur', function() {
-            if (this.value && !/^[\d\s\(\)\-]+$/.test(this.value)) {
+            if (this.value && !/^\+?[\d\s\-\(\)]{7,20}$/.test(this.value)) {
                 this.closest('.form-group').classList.add('error');
-                this.nextElementSibling.textContent = 'Please enter a valid phone number';
+                this.nextElementSibling.textContent = 'Please enter a valid phone number (international format accepted)';
             }
         });
         
