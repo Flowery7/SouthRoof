@@ -838,7 +838,7 @@ header {
             <p>A proud family run business with over 15 years of experience, we provide top-quality roofing services with industry-leading warranties and exceptional customer service.</p>
             <div class="hero-btns">
                 <a href="about.html#get-quote" class="btn">Get a Free Quote</a>
-                <a href="tel:+08001585856" class="btn">Call Now</a>
+                <a href="tel:+08001585856" class="btn">Call 0800 158 58 56</a>
             </div>
         </div>
     </section>
@@ -992,52 +992,88 @@ header {
 
 
 
-
-    <!-- About Section -->
-    <section class="section about" id="about">
-        <div class="container">
-            <h2 class="section-title">Why Choose Us</h2>
-            <div class="about-container">
-                <div class="about-content">
-                    <h2>Trusted Roofing Experts Since 2010</h2>
-                    <p>South Beds Roofing has been providing exceptional roofing services to residential and commercial clients for nearly two decades. Our commitment to quality craftsmanship and customer satisfaction sets us apart.</p>
-                    <p>We use only premium materials from trusted manufacturers and back our work with industry-leading warranties. Our team of certified professionals undergoes continuous training to stay current with the latest techniques and technologies.</p>
-                    <div class="about-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <div>
-                                <h4>Lifetime Warranties</h4>
-                                <p>We offer comprehensive warranties that protect your investment for decades.</p>
-                            </div>
+<!-- About Section -->
+<section class="section about" id="about">
+    <div class="container">
+        <h2 class="section-title">Why Choose Us</h2>
+        <div class="about-container">
+            <div class="about-content">
+                <h2>Trusted Roofing Experts Since 2010</h2>
+                <p>South Beds Roofing has been providing exceptional roofing services to residential and commercial clients for nearly two decades. Our commitment to quality craftsmanship and customer satisfaction sets us apart.</p>
+                <p>We use only premium materials from trusted manufacturers and back our work with industry-leading warranties. Our team of certified professionals undergoes continuous training to stay current with the latest techniques and technologies.</p>
+                
+                <!-- Added stock image container -->
+                <div class="stock-badge">
+                    <img src="roofing_product.png" alt="Trusted Roofing Professionals" style="max-width: 200px;">
+                </div>
+                
+                <div class="about-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-award"></i>
-                            </div>
-                            <div>
-                                <h4>Certified Professionals</h4>
-                                <p>Our team includes factory-certified installers with extensive experience.</p>
-                            </div>
+                        <div>
+                            <h4>Lifetime Warranties</h4>
+                            <p>We offer comprehensive warranties that protect your investment for decades.</p>
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-hand-holding-heart"></i>
-                            </div>
-                            <div>
-                                <h4>Customer-First Approach</h4>
-                                <p>Your satisfaction is our top priority from initial consultation to final inspection.</p>
-                            </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div>
+                            <h4>Certified Professionals</h4>
+                            <p>Our team includes factory-certified installers with extensive experience.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <div>
+                            <h4>Customer-First Approach</h4>
+                            <p>Your satisfaction is our top priority from initial consultation to final inspection.</p>
                         </div>
                     </div>
                 </div>
-                <div class="about-img">
-                    <img src="roofers-2891664_1280.jpg" alt="Our roofing team">
-                </div>
+            </div>
+            <div class="about-img">
+                <img src="roofers-2891664_1280.jpg" alt="Our roofing team">
             </div>
         </div>
-    </section>
+    </div>
+</section>
+<style>
+    /* Stock Badge Styling */
+.stock-badge {
+    text-align: center;
+    margin: 1.5rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.stock-badge img {
+    max-width: 200px;
+    height: auto;
+    filter: brightness(0) invert(1); /* Makes white logo visible on dark bg */
+    transition: all 0.3s ease;
+}
+
+/* Adjustments for light backgrounds if needed */
+.about .stock-badge img {
+    filter: none; /* Remove filter if not on dark background */
+}
+
+@media (max-width: 768px) {
+    .stock-badge {
+        margin: 1rem 0;
+    }
+    .stock-badge img {
+        max-width: 150px;
+    }
+}
+</style>
 
 
 
